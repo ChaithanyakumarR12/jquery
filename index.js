@@ -1,0 +1,14 @@
+$("#visible").click(()=>{
+    $("#paragraph").show();
+});
+$("#hide").click(()=>{
+    $("#paragraph").hide();
+});
+$("#changehead").click(()=>{
+$.ajax({
+  url:"https://jsonplaceholder.typicode.com/todos/12",type:"GET",
+    success:(data)=>{
+        document.getElementById("head").innerText=data.title;
+    }
+})
+});
